@@ -68,24 +68,7 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey '\e[A' history-beginning-search-backward-end
 bindkey '\e[B' history-beginning-search-forward-end
 
-#vim tags
-#function _get_tags {
-#  [ -f ./tags ] || return
-#  local cur
-#  read -l cur
-#  echo $(echo $(awk -v ORS=" "  "/^${cur}/ { print \$1 }" tags))
-#}
-
-export VIM=/usr/local/share/vim/vim74
-export VIMRUNTIME="/usr/local/share/vim/vim74"
 export NODE_PATH=/usr/local/lib/node_modules:./node_modules:$NODE_PATH
-
-#tmuxinator
-#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-#export EDITOR=/usr/local/bin/vim
-
-#teamocil autocomplete
-#compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 #remove rake tab completion
 compdef -d rake
@@ -114,9 +97,6 @@ export PATH="./node_modules/.bin:$PATH"
 #Swift Package Manager
 export TOOLCHAINS=swift
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH
-
-#Tsung
-export PATH=/usr/local/Cellar/tsung/1.6.0/lib/tsung/bin/:$PATH
 
 PATH="~/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;

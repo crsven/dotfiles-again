@@ -1,0 +1,51 @@
+[user]
+  name = Chris Svenningsen
+  email = chris@carbonfive.com
+
+[alias]
+  com = commit
+  ci = commit -m
+  st = status -s
+  br = branch
+  co = checkout
+  lg = !git --no-pager log --graph --all
+  l = log --graph
+  ll = !git --no-pager log --max-count=10
+  lll = !git --no-pager log --max-count=20
+  hist = log --pretty
+  type = cat-file -t
+  dump = cat-file -p
+  pt = push all --tags
+  dc = diff --cached
+  rollback = !git reset --soft HEAD~ && git reset HEAD .
+  amend = commit -a --amend
+  wip = !git add -A && git commit -m '[ci-skip] wip' -n
+  serve = !git daemon --reuseaddr --base-path=. --export-all --verbose
+  update-develop = !git co develop\t && git pull && git co -
+  ;lost-stashes = !git fsck |grep commit | cut -d\\  -f3 | xargs git ll --merges --no-walk --grep=WIP
+  lost-stashes = !git fsck |grep commit | cut -d ' '  -f3 | xargs git ll --merges --no-walk --grep=WIP
+  lost-commits = !git fsck --no-reflogs | grep commit | cut -d\\  -f3 | xargs git ll --no-walk
+  lost-file = !git fsck --no-reflogs | grep commit | cut -d ' ' -f3 | xargs -J @ git log --no-walk --name-status @ --
+  ;git lost-commits --pretty=tformat:'%H' | xargs -L1 git --no-pager show --name-status
+  fethc = fetch
+
+[format]
+  pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+
+[merge]
+  tool = vimdiff
+
+[core]
+  editor=/usr/local/bin/vim
+  excludesfile = /Users/crsven/.gitignore_global
+
+[color]
+  diff = always
+  status = always
+  ui = auto
+[init]
+  templatedir = ~/.git_template
+[rerere]
+  enabled = true
+[diff]
+  compactionHeuristic = true

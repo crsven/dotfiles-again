@@ -1,0 +1,17 @@
+*.swp
+*.swo
+*.un~
+.DS_Store
+*.tmp
+.rvmrc
+*.pyc
+rerun.txt
+tags
+maketags
+ctags-makefile
+Makefile
+config/encrypted.yml
+config/database.yml
+mixture.json
+**/tmp-mixture/*
+.ctags

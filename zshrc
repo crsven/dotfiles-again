@@ -78,8 +78,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-source ~/PARTICLE_CORE_VARS
-
 alias resu='sudo $(history | tail -n1 | cut -c 8-)'
 
 export NVM_DIR="~/.nvm"

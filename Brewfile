@@ -18,6 +18,7 @@ brew "mongodb", restart_service: true
 brew "node"
 brew "openssl"
 brew "pgcli"
+brew "pinentry-mac"
 brew "postgresql", restart_service: true
 brew 'qt5'
 brew "ruby-build"

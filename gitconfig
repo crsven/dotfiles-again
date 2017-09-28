@@ -1,6 +1,7 @@
 [user]
   name = Chris Svenningsen
-  email = chris@carbonfive.com
+  email = crsven@gmail.com
+  ;signingkey = <ADD KEY ID>
 
 [alias]
   com = commit
@@ -49,3 +50,7 @@
   enabled = true
 [diff]
   compactionHeuristic = true
+[commit]
+  ;gpgsign = true
+[gpg]
+	;program = /usr/local/bin/gpg

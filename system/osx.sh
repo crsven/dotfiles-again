@@ -98,7 +98,7 @@ echo "Empty trash securely"
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 echo "Finder: Always open everything in list view"
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
 
 echo "Disable autocorrect"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false

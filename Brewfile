@@ -25,7 +25,6 @@ brew "rbenv"
 tap "thoughtbot/formulae"
 brew "rcm"
 brew "redis", restart_service: true
-brew "swiftlint"
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
@@ -58,4 +57,8 @@ mas "DoublePane", id: 409737246
 mas "Due", id: 524373870
 mas "Moom", id: 419330170
 mas "Sip", id: 507257563
+
+# Apple Dev
 mas "Xcode", id: 497799835
+system "sudo xcodebuild -license accept"
+brew "swiftlint"

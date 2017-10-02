@@ -8,13 +8,13 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
+    zgen oh-my-zsh plugins/asdf
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/brew-cask
     zgen oh-my-zsh plugins/bundler
     zgen oh-my-zsh plugins/coffee
     zgen oh-my-zsh plugins/node
     zgen oh-my-zsh plugins/osx
-    zgen oh-my-zsh plugins/rbenv
     zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh themes/bira
@@ -50,9 +50,6 @@ alias ll='ls -lah'
 alias ber='bundle exec rake'
 alias bec='bundle exec cucumber'
 
-#Add rbenv shims
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # fixing auto correct
 alias git='nocorrect git'
 alias bundle='nocorrect bundle'
@@ -75,8 +72,6 @@ compdef -d rake
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias resu='sudo $(history | tail -n1 | cut -c 8-)'
 
@@ -111,3 +106,7 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 else
   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

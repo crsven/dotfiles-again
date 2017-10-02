@@ -52,6 +52,8 @@ RCRC=rcrc rcup -v
 fancy_echo "Installing Vim packages..."
 vim +PluginUpdate +qall
 
+source scripts/asdf.sh
+
 fancy_echo "Changing your shell to zsh ..."
 if ! grep "$(which zsh)" /etc/shells; then
   sudo sh -c 'echo "$(which zsh)" >> /etc/shells'

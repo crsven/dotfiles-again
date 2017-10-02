@@ -15,14 +15,11 @@ tap "heroku/brew"
 brew "heroku"
 brew "mas"
 brew "mongodb", restart_service: true
-brew "node"
 brew "openssl"
 brew "pgcli"
 brew "pinentry-mac"
 brew "postgresql", restart_service: true
 brew 'qt5'
-brew "ruby-build"
-brew "rbenv"
 tap "thoughtbot/formulae"
 brew "rcm"
 brew "redis", restart_service: true

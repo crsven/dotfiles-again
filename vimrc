@@ -63,6 +63,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'sophacles/vim-processing'
 
 Plugin 'w0rp/ale'
+Plugin 'vimwiki/vimwiki'
 
 call vundle#end()
 filetype plugin indent on

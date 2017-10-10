@@ -15,3 +15,4 @@ config/database.yml
 mixture.json
 **/tmp-mixture/*
 .ctags
+**/projections.json

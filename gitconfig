@@ -10,7 +10,7 @@
   br = branch
   co = checkout
   lg = !git --no-pager log --graph --all
-  l = log --graph
+  l = !git --no-pager log --graph
   ll = !git --no-pager log --max-count=10
   lll = !git --no-pager log --max-count=20
   hist = log --pretty

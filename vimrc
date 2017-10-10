@@ -46,13 +46,7 @@ Plugin 'cloud8421/vimux-cucumber'
 Plugin 'pgr0ss/vimux-ruby-test'
 
 " Language support
-Plugin 'lunaru/vim-less'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'slim-template/vim-slim'
-Plugin 'nono/vim-handlebars'
-Plugin 'kchmck/vim-coffee-script.git'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'sheerun/vim-polyglot'
 
 "Clojure
 Plugin 'guns/vim-clojure-static'

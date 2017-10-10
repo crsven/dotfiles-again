@@ -9,6 +9,7 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.jsx set ft=javascript
 
 " add handlebars syntax highlighting
 au BufNewFile,BufRead *.hbs set ft=handlebars

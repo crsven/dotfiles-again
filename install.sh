@@ -49,6 +49,9 @@ fi
 fancy_echo "Linking dotfiles into ~..."
 RCRC=rcrc rcup -v
 
+fancy_echo "Creating Vim undo directory..."
+mkdir ~/.vim/undo
+
 fancy_echo "Installing Vim packages..."
 vim +PluginUpdate +qall
 

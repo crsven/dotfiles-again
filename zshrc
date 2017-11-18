@@ -110,3 +110,5 @@ fi
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+alias i="figlet -f poison i $@"

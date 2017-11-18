@@ -58,6 +58,7 @@ Plugin 'sophacles/vim-processing'
 
 Plugin 'w0rp/ale'
 Plugin 'vimwiki/vimwiki'
+Plugin 'hail2u/vim-css3-syntax'
 
 call vundle#end()
 filetype plugin indent on

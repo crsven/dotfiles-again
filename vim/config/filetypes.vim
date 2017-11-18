@@ -24,3 +24,7 @@ au BufNewFile,BufRead *.slim set ft=slim
 au BufNewFile,BufRead *.swift set ft=swift
 
 au BufNewFile,BufRead *.processing set ft=processing
+
+" add typescript syntax highlighting
+au BufNewFile,BufRead *.tx set ft=typescript
+au BufNewFile,BufRead *.tsx set ft=typescript

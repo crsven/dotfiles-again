@@ -107,8 +107,14 @@ else
   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
 
+alias ctags="`brew --prefix`/bin/ctags"
+
+alias i="figlet -f poison i $@"
+
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+export PATH="$(yarn global bin):$PATH"
+
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
-alias i="figlet -f poison i $@"

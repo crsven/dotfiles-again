@@ -20,14 +20,14 @@ Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'mattn/emmet-vim.git'
 Plugin 'ervandew/supertab.git'
-Plugin 'malkomalko/projections.vim'
+Plugin 'tpope/vim-projectionist'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rizzatti/dash.vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
 "Rails dev
-Plugin 'tpope/vim-rails.git'
+"Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-rake.git'
 
 "Searching
@@ -42,8 +42,7 @@ Plugin 'benmills/vimux'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 "Testing plugins
-Plugin 'cloud8421/vimux-cucumber'
-Plugin 'pgr0ss/vimux-ruby-test'
+Plugin 'janko-m/vim-test'
 
 " Language support
 Plugin 'sheerun/vim-polyglot'

@@ -17,3 +17,4 @@ mixture.json
 .ctags
 **/projections.json
 .env
+.projections.json

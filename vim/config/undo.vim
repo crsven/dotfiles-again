@@ -1,2 +1,2 @@
-set undodir=~/.vim/undo
+set undodir=~/.vim/undodir
 set undofile

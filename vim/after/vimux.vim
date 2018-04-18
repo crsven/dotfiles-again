@@ -6,24 +6,25 @@ let g:VimuxSporkCommand = ""
 
 if exists('$TMUX')
   " Test commands for various filetypes
-  autocmd FileType coffee map <Leader>ts :call VimuxRunCommand("bundle exec rake spec:javascript SPEC=".bufname("%")."\n")<CR>
-  autocmd FileType coffee map <Leader>ta :call VimuxRunCommand("bundle exec rake spec:javascript\n")<CR>
+  "autocmd FileType coffee map <Leader>ts :call VimuxRunCommand("bundle exec rake spec:javascript SPEC=".bufname("%")."\n")<CR>
+  "autocmd FileType coffee map <Leader>ta :call VimuxRunCommand("bundle exec rake spec:javascript\n")<CR>
   "autocmd FileType javascript map <Leader>ts :call VimuxRunCommand("bundle exec rake spec:javascript SPEC=".bufname("%")."\n")<CR>
   "autocmd FileType javascript map <Leader>ts :call VimuxRunJasmineSpec()<CR>
   "autocmd FileType javascript map <Leader>ts :call VimuxRunJestTest()<CR>
-  autocmd FileType javascript map <Leader>ts :call VimuxRunKonachaSpec()<CR>
+  "autocmd FileType javascript map <Leader>tf :call VimuxRunJestTest()<CR>
+  "autocmd FileType javascript map <Leader>ts :call VimuxRunKonachaSpec()<CR>
   "autocmd FileType javascript map <Leader>ts :call VimuxRunCommand("rake spec:javascript SPEC=".bufname("%")."\n")<CR>
   "autocmd FileType javascript map <Leader>ta :call VimuxRunCommand("rake spec:javascript\n")<CR>
-  autocmd FileType javascript map <Leader>ta :call VimuxRunCommand("rake konacha:run\n")<CR>
-  "autocmd FileType javascript map <Leader>ta :call VimuxRunCommand("npm test\n")<CR>
-  autocmd FileType ruby map <leader>ts :RunRubyFocusedTest<CR>
+  "autocmd FileType javascript map <Leader>ta :call VimuxRunCommand("rake konacha:run\n")<CR>
+  "autocmd FileType javascript map <Leader>ta :call VimuxRunCommand("yarn test\n")<CR>
+  "autocmd FileType ruby map <leader>ts :RunRubyFocusedTest<CR>
   "autocmd FileType ruby map <Leader>ts :call VimuxRunCommand("bundle exec rspec ".bufname("%")."\n")<CR>
   "autocmd FileType ruby map <Leader>ts :call VimuxRunCommand("bundle exec rescue rspec ".bufname("%").":".line('.')."\n")<CR>
-  autocmd FileType ruby map <leader>tf :RunAllRubyTests<CR>
-  autocmd FileType ruby map <leader>ta :call VimuxRunCommand("bundle exec rspec\n")<CR>
-  autocmd FileType cucumber map <Leader>ts :RunFocusedCuke<CR>
-  autocmd FileType cucumber map <Leader>ta :RunAllCukes<CR>
-  autocmd FileType cucumber nmap <Leader>tf :call VimuxRunCommand("bundle exec cucumber ".bufname("%")."\n")<CR>
+  "autocmd FileType ruby map <leader>tf :RunAllRubyTests<CR>
+  "autocmd FileType ruby map <leader>ta :call VimuxRunCommand("bundle exec rspec\n")<CR>
+  "autocmd FileType cucumber map <Leader>ts :RunFocusedCuke<CR>
+  "autocmd FileType cucumber map <Leader>ta :RunAllCukes<CR>
+  "autocmd FileType cucumber nmap <Leader>tf :call VimuxRunCommand("bundle exec cucumber ".bufname("%")."\n")<CR>
 
   " Get current Cane status
   map <Leader>tc :call VimuxRunCommand("bundle exec cane --style-measure 80 --style-glob ".bufname("%")." --abc-max 1 --abc-glob ".bufname("%")."\n")<CR>
@@ -46,7 +47,7 @@ if exists('$TMUX')
   autocmd FileType ruby map <leader>wtf :call VimuxRerunWithDebugger()<CR>
 
   function! VimuxRunJestTest()
-    call VimuxRunCommand("npm test -- ".bufname("%")."\n")
+    call VimuxRunCommand("yarn test ".bufname("%")."\n")
   endfunction
 
   function! VimuxRerunWithDebugger()

@@ -6,10 +6,10 @@ au BufRead,BufNewFile *.slim set filetype=slim
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 au BufRead,BufNewFile Capfile set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
+au BufRead,BufNewFile *.pdf.prawn set filetype=ruby
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead *.jsx set ft=javascript
 
 " add handlebars syntax highlighting
 au BufNewFile,BufRead *.hbs set ft=handlebars

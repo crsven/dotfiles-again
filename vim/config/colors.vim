@@ -3,3 +3,5 @@ set t_Co=256
 syntax on
 set background=dark
 colorscheme gruvbox
+
+highlight cppStructure guifg=black

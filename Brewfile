@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 
 # Homebrew
+brew "asdf"
 brew "awscli"
 brew "git"
 brew "carthage"

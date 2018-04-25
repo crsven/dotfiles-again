@@ -115,6 +115,10 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 export PATH="$(yarn global bin):$PATH"
 
+export GIT_DUET_CO_AUTHORED_BY=1
+
+alias dcr="docker-compose run"
+
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash

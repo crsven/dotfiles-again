@@ -19,7 +19,6 @@ Plugin 'michaeljsmith/vim-indent-object.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'mattn/emmet-vim.git'
-Plugin 'ervandew/supertab.git'
 Plugin 'tpope/vim-projectionist'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rizzatti/dash.vim'
@@ -58,6 +57,10 @@ Plugin 'sophacles/vim-processing'
 Plugin 'w0rp/ale'
 Plugin 'vimwiki/vimwiki'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'runoshun/tscompletejob'
+Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
 
 call vundle#end()
 filetype plugin indent on

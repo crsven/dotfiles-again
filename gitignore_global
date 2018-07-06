@@ -11,10 +11,9 @@ maketags
 ctags-makefile
 Makefile
 config/encrypted.yml
-config/database.yml
 mixture.json
 **/tmp-mixture/*
 .ctags
-**/projections.json
 .env
+projections.json
 .projections.json

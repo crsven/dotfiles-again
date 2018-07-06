@@ -7,7 +7,7 @@
   com = commit
   ci = commit -m
   st = status -s
-  br = branch
+  br = !git --no-pager branch
   co = checkout
   lg = !git --no-pager log --graph --all
   l = !git --no-pager log --graph
@@ -34,14 +34,16 @@
   clean-branches = !git branch --merged | grep -v '^*' | xargs git branch -D
 
 [format]
-  pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+  pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset
 
 [merge]
   tool = vimdiff
+  conflictstyle = diff3
+  prompt = false
 
 [core]
   editor=/usr/local/bin/vim
-  excludesfile = /Users/crsven/.gitignore_global
+  excludesfile = ~/.gitignore_global
 
 [color]
   diff = always

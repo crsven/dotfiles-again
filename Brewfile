@@ -6,8 +6,8 @@ brew "asdf"
 brew "awscli"
 brew "git"
 brew "carthage"
-brew "elixir"
 brew "figlet"
+brew "fzf"
 brew 'gpg'
 brew 'gpg2'
 brew 'gpg-agent'

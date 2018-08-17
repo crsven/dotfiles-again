@@ -36,7 +36,7 @@ autoload -U compinit && compinit
 zmodload -i zsh/complist
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin
 export TEMP=~/temp
 
 # z stuff
@@ -114,6 +114,8 @@ alias i="figlet -f poison i $@"
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 export PATH="$(yarn global bin):$PATH"
+export GOPATH=$HOME/go
+export PATH="$GOPATH:$PATH:/usr/local/go/bin"
 
 export GIT_DUET_CO_AUTHORED_BY=1
 
@@ -122,3 +124,8 @@ alias dcr="docker-compose run"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+#fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="ag -g ''"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

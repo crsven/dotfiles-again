@@ -18,9 +18,9 @@
   dump = cat-file -p
   pt = push all --tags
   dc = diff --cached
-  rollback = !git reset --soft HEAD~ && git reset HEAD .
+  rollback = reset HEAD~
   amend = commit -a --amend
-  wip = !git add -A && git commit -m '[ci-skip] wip' -n
+  wip = !git add -A && git commit -m '[ci skip] wip' -n
   serve = !git daemon --reuseaddr --base-path=. --export-all --verbose
   update-develop = !git co develop\t && git pull && git co -
   ;lost-stashes = !git fsck |grep commit | cut -d\\  -f3 | xargs git ll --merges --no-walk --grep=WIP
@@ -59,3 +59,10 @@
   gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+[push]
+  default = current
+[pull]
+  rebase = true
+[rebase]
+  autosquash = true
+  autostash = true

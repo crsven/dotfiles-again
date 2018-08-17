@@ -45,9 +45,3 @@ highlight ColorColumn guibg=#1c1c1c ctermbg=234 ctermfg=160
 autocmd FileType markdown setlocal wrap
 
 set autoread
-
-" persistant undo
-if has('persistent_undo')
-  set undodir=$HOME/.undo
-  set undofile
-endif

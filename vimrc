@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'vim-scripts/L9.git'
+Plugin 'mbbill/undotree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tsaleh/vim-align.git'
 Plugin 'tpope/vim-endwise.git'
@@ -22,12 +23,17 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
+" Git
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'airblade/vim-gitgutter'
+
 "Rails dev
-"Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-rake.git'
 
 "Searching
 Plugin 'rking/ag.vim'
+Plugin 'junegunn/fzf.vim'
 
 
 "Nerdtree
@@ -53,11 +59,14 @@ Plugin 'sophacles/vim-processing'
 
 Plugin 'w0rp/ale'
 Plugin 'vimwiki/vimwiki'
+Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'runoshun/tscompletejob'
-Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'prabirshrestha/asyncomplete.vim'
+"Plugin 'prabirshrestha/asyncomplete-buffer.vim'
+"Plugin 'runoshun/tscompletejob'
+"Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
 
 call vundle#end()
 filetype plugin indent on

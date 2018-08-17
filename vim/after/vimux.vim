@@ -41,6 +41,7 @@ if exists('$TMUX')
 
   " Prompt command
   map <leader>vp :VimuxPromptCommand<CR>
+  map <leader>vk :VimuxInterruptRunner<CR>
 
   " Run last command with debugger once
   "autocmd FileType ruby map <leader>wtf Orequire 'ruby-debug'; debugger;<ESC>:w<CR>:VimuxRunLastCommand<CR>dd :sleep 8<CR> :w<CR>

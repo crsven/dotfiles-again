@@ -10,11 +10,9 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'vim-scripts/L9.git'
-Plugin 'sjl/gundo.vim.git'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tsaleh/vim-align.git'
 Plugin 'tpope/vim-endwise.git'
-Plugin 'tpope/vim-fugitive.git'
 Plugin 'michaeljsmith/vim-indent-object.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
@@ -22,7 +20,6 @@ Plugin 'mattn/emmet-vim.git'
 Plugin 'tpope/vim-projectionist'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rizzatti/dash.vim'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
 "Rails dev
@@ -31,7 +28,7 @@ Plugin 'tpope/vim-rake.git'
 
 "Searching
 Plugin 'rking/ag.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+
 
 "Nerdtree
 Plugin 'scrooloose/nerdtree.git'

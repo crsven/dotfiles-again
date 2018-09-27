@@ -127,5 +127,6 @@ alias dcr="docker-compose run"
 
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey '^R' history-incremental-search-backward # override FZF Ctrl-R searching
 export FZF_DEFAULT_COMMAND="ag -g ''"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

@@ -15,5 +15,6 @@ mixture.json
 **/tmp-mixture/*
 .ctags
 .env
+config/projections.json
 projections.json
 .projections.json

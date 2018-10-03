@@ -32,6 +32,7 @@
   dci = duet-commit
   drb = rebase -i --exec 'git duet-commit --amend --no-verify --no-edit'
   clean-branches = !git branch --merged | grep -v '^*' | xargs git branch -D
+  autosquash = !GIT_EDITOR=true git rebase -i --autosquash origin/development
 
 [format]
   pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset

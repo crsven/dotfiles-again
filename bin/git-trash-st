@@ -1,0 +1,4 @@
+#!/bin/bash
+git st |
+awk '{ print $2 }' |
+xargs rm -rf

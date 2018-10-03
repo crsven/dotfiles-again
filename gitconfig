@@ -20,7 +20,7 @@
   dc = diff --cached
   rollback = reset HEAD~
   amend = commit -a --amend
-  wip = !git add -A && git commit -m '[ci skip] wip' -n
+  ;wip = !git add -A && git commit -m '[ci skip] wip' -n
   serve = !git daemon --reuseaddr --base-path=. --export-all --verbose
   update-develop = !git co develop\t && git pull && git co -
   ;lost-stashes = !git fsck |grep commit | cut -d\\  -f3 | xargs git ll --merges --no-walk --grep=WIP

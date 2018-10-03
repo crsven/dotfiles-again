@@ -81,3 +81,7 @@ ln -s $(pwd)/bin/* /usr/local/bin
 
 fancy_echo "Installing fonts to ~/Library/Fonts..."
 ln -s $(pwd)/fonts/* ~/Library/Fonts
+
+fancy_echo "Installing git signing key ignore filter..."
+git config filter.nokey.clean "sed '/signingkey =/'d"
+git config filter.nokey.smudge "cat"

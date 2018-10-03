@@ -1,7 +1,7 @@
 [user]
   name = Chris Svenningsen
   email = crsven@gmail.com
-  signingkey = <ADD KEY ID>
+  # add gpg key here
 
 [alias]
   com = commit

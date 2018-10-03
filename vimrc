@@ -13,7 +13,6 @@ Plugin 'vim-scripts/L9.git'
 Plugin 'mbbill/undotree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tsaleh/vim-align.git'
-Plugin 'tpope/vim-endwise.git'
 Plugin 'michaeljsmith/vim-indent-object.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
@@ -34,7 +33,6 @@ Plugin 'tpope/vim-rake.git'
 "Searching
 Plugin 'rking/ag.vim'
 Plugin 'junegunn/fzf.vim'
-
 
 "Nerdtree
 Plugin 'scrooloose/nerdtree.git'
@@ -59,19 +57,18 @@ Plugin 'sophacles/vim-processing'
 
 Plugin 'w0rp/ale'
 Plugin 'vimwiki/vimwiki'
-Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'leafgarland/typescript-vim'
-"Plugin 'valloric/youcompleteme'
-"Plugin 'prabirshrestha/asyncomplete.vim'
-"Plugin 'prabirshrestha/asyncomplete-buffer.vim'
-"Plugin 'runoshun/tscompletejob'
-"Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-buffer.vim'
+Plugin 'runoshun/tscompletejob'
+Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
 
 call vundle#end()
 filetype plugin indent on
 syntax enable
 
 " delegate configuration to files in config/
-runtime! config/**/*.vim
+runtime! config/*.vim
+runtime! config/bundle/*.vim
 runtime! after/**/*.vim

@@ -32,6 +32,6 @@ else
   asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 fi
 
-#pushd ~
-#asdf install
-#popd
+pushd ~
+asdf install
+popd

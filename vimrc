@@ -71,4 +71,3 @@ syntax enable
 " delegate configuration to files in config/
 runtime! config/*.vim
 runtime! config/plugin/*.vim
-runtime! after/**/*.vim

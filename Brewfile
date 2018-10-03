@@ -56,6 +56,7 @@ mas "DoublePane", id: 409737246
 mas "Due", id: 524373870
 mas "Moom", id: 419330170
 mas "Sip", id: 507257563
+mas "Bear", id: 1091189122
 
 # Apple Dev
 mas "Xcode", id: 497799835

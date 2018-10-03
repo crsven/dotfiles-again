@@ -9,71 +9,17 @@ fancy_echo() {
   printf "\n$fmt\n" "$@"
 }
 
-if ! command -v brew >/dev/null; then
-  fancy_echo "Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  export PATH="/usr/local/bin:$PATH"
-else
-  fancy_echo "Homebrew already installed. Skipping ..."
-fi
+export -f fancy_echo
 
-fancy_echo "Installing base16-shell..."
-if test -e ~/.config/base16-shell; then
-  pushd ~/.config/base16-shell
-  git pull
-  popd
-else
-  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-fi
-
-fancy_echo "Installing Homebrew packages..."
-brew update
-brew tap homebrew/bundle
-brew bundle
-brew unlink qt 2>/dev/null || true
-brew link --force qt5
-
-fancy_echo "Installing Vundler..."
-if test -e ~/.vim/bundle/Vundle.vim; then
-	fancy_echo "Vundler already installed, updating..."
-  pushd ~/.vim/bundle/Vundle.vim
-  git pull
-  popd
-else
-  mkdir -p ~/.vim/bundle
-  pushd ~/.vim/bundle
-  git clone https://github.com/gmarik/Vundle.vim.git
-  popd
-fi
+source scripts/brew.sh
+source scripts/base-16.sh
 
 fancy_echo "Linking dotfiles into ~..."
 RCRC=rcrc rcup -v
 
-fancy_echo "Creating Vim undo directory..."
-mkdir -p ~/.vim/undo
-mkdir -p ~/.vim/swp
-
-fancy_echo "Installing Vim packages..."
-vim +PluginUpdate +qall
-
+source scripts/vim.sh
 source scripts/asdf.sh
-
-fancy_echo "Changing your shell to zsh ..."
-if ! grep "$(which zsh)" /etc/shells; then
-  sudo sh -c 'echo "$(which zsh)" >> /etc/shells'
-fi
-chsh -s "$(which zsh)"
-
-fancy_echo "Installing zgen..."
-if test -e ~/.zgen/zgen.zsh; then
-  fancy_echo "zgen installed, updating..."
-  source ~/.zgen/zgen.zsh
-  zgen selfupdate
-  zgen update
-else
-  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-fi
-
+source scripts/zsh.sh
 source system/osx.sh
 
 fancy_echo "Installing scripts to /usr/local/bin..."
@@ -82,6 +28,4 @@ ln -s $(pwd)/bin/* /usr/local/bin
 fancy_echo "Installing fonts to ~/Library/Fonts..."
 ln -s $(pwd)/fonts/* ~/Library/Fonts
 
-fancy_echo "Installing git signing key ignore filter..."
-git config filter.nokey.clean "sed '/signingkey =/'d"
-git config filter.nokey.smudge "cat"
+source system/git.sh

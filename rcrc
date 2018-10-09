@@ -1,2 +1,2 @@
-EXCLUDES="README.md Brewfile install.sh system scripts bin"
+EXCLUDES="README.md Brewfile install.sh fonts system scripts bin"
 SYMLINK_DIRS="vim/*"

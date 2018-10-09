@@ -2,15 +2,12 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 
 # Homebrew
-brew "asdf"
 brew "awscli"
 brew "git"
 brew "carthage"
 brew "figlet"
 brew "fzf"
-brew 'gpg'
-brew 'gpg2'
-brew 'gpg-agent'
+brew 'gnupg'
 brew "grep", args: ["with-default-names"]
 tap "heroku/brew"
 brew "heroku"
@@ -30,6 +27,7 @@ brew "tmux"
 brew "tree"
 brew "vim"
 brew "wemux"
+brew "yarn"
 brew "z"
 brew "zsh"
 
@@ -42,23 +40,20 @@ cask "dash"
 cask "dropbox"
 cask "google-chrome"
 cask "iterm2"
-cask "knock"
-cask "macid"
-cask "screenhero"
 cask "slack"
 cask "spotify"
 cask "steam"
-cask "superduper"
 cask "vlc"
 
 # App Store
-mas "DoublePane", id: 409737246
-mas "Due", id: 524373870
-mas "Moom", id: 419330170
-mas "Sip", id: 507257563
-mas "Bear", id: 1091189122
+# system "mas signin <email>"
+# mas "DoublePane", id: 409737246
+# mas "Due", id: 524373870
+# mas "Moom", id: 419330170
+# mas "Sip", id: 507257563
+# mas "Bear", id: 1091189122
 
 # Apple Dev
-mas "Xcode", id: 497799835
-system "sudo xcodebuild -license accept"
-brew "swiftlint"
+# mas "Xcode", id: 497799835
+# system "sudo xcodebuild -license accept"
+# brew "swiftlint"

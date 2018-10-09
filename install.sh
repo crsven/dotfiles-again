@@ -18,14 +18,18 @@ fancy_echo "Linking dotfiles into ~..."
 RCRC=rcrc rcup -v
 
 source scripts/vim.sh
-source scripts/asdf.sh
 source scripts/zsh.sh
+
+CURRENT_SHELL=$(echo $0)
+if [[ $CURRENT_SHELL != *zsh ]]; then
+  fancy_echo "Please re-run in a new tab/window with ZSH"
+  exit 1
+fi
+
+source scripts/asdf.sh
 source system/osx.sh
 
-fancy_echo "Installing scripts to /usr/local/bin..."
-ln -s $(pwd)/bin/* /usr/local/bin
-
-fancy_echo "Installing fonts to ~/Library/Fonts..."
-ln -s $(pwd)/fonts/* ~/Library/Fonts
-
+source scripts/bin.sh
+source scripts/fonts.sh
 source system/git.sh
+fancy_echo "Bootstrapped!"

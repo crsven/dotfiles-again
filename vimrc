@@ -59,10 +59,14 @@ Plugin 'w0rp/ale'
 Plugin 'vimwiki/vimwiki'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/asyncomplete-buffer.vim'
-Plugin 'runoshun/tscompletejob'
-Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'roxma/nvim-yarp'
+" Plugin 'roxma/vim-hug-neovim-rpc'
+" Plugin 'deoplete-plugins/deoplete-jedi'
+" Plugin 'prabirshrestha/asyncomplete.vim'
+" Plugin 'prabirshrestha/asyncomplete-buffer.vim'
+" Plugin 'runoshun/tscompletejob'
+" Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
 
 call vundle#end()
 filetype plugin indent on

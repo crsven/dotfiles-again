@@ -18,3 +18,4 @@ mixture.json
 config/projections.json
 projections.json
 .projections.json
+.elixir_ls/**/*

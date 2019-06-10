@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # check last commit message
-LAST_MESSAGE=$(git log -1 --format=%B)
+LAST_MESSAGE=$(git --no-pager log -1 --format=%B)
+DEFAULT_MESSAGE="[WIP]"
 
-if [[ $LAST_MESSAGE = *[WIP]* ]]; then
+git add .
+if [[ $LAST_MESSAGE = $DEFAULT_MESSAGE ]]; then
   # if includes [WIP], --fixup
   LAST_SHA=$(git log -1 --format=%h)
   git commit -a --no-verify --fixup=$LAST_SHA
 else
 # else, add first [WIP]
-  git commit -am '[WIP] [ci skip]' --no-verify
+  git commit -am $DEFAULT_MESSAGE --no-verify
 fi
 

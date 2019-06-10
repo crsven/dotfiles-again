@@ -35,6 +35,8 @@ fi
 autoload -U compinit && compinit
 zmodload -i zsh/complist
 
+export DISABLE_UPDATE_PROMPT=true
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin
 export TEMP=~/temp
@@ -135,3 +137,5 @@ alias dcr="docker-compose run"
 bindkey '^R' history-incremental-search-backward # override FZF Ctrl-R searching
 export FZF_DEFAULT_COMMAND="ag -g ''"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+GIT_INITIALS="$(git config duet.env.git-author-initials) $(git config duet.env.git-commiter-initials)"

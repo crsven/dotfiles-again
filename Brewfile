@@ -7,6 +7,8 @@ brew "git"
 brew "carthage"
 brew "figlet"
 brew "fzf"
+tap "git-duet/tap"
+brew "git-duet"
 brew 'gnupg'
 brew "grep", args: ["with-default-names"]
 tap "heroku/brew"

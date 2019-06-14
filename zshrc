@@ -1,5 +1,7 @@
 unset GREP_OPTIONS
 
+export ZSH_THEME='bira-virtualenv'
+
 source "${HOME}/.zgen/zgen.zsh"
 # if the init scipt doesn't exist
 if ! zgen saved; then
@@ -17,6 +19,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/osx
     zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/virtualenv
     zgen oh-my-zsh themes/bira
 
     # bulk load

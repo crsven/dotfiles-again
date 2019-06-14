@@ -36,6 +36,7 @@ Plugin 'junegunn/fzf.vim'
 
 "Nerdtree
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 "Tmux integration
 Plugin 'benmills/vimux'

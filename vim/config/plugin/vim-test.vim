@@ -4,7 +4,4 @@ map <Leader>ta :TestSuite<CR>
 
 let test#strategy = "vimux"
 
-let test#python#pyunit#options = {
-  \ 'suite':   '--failfast',
-\}
-let test#python#pyunit#executable = 'dcr web python3 ./manage.py test'
+let test#python#pyunit#executable = 'python src/tests/run_tests.py'

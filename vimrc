@@ -1,5 +1,3 @@
-set nocompatible
-
 " Vundle stuff
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,11 +14,11 @@ Plugin 'tsaleh/vim-align.git'
 Plugin 'michaeljsmith/vim-indent-object.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
-Plugin 'mattn/emmet-vim.git'
 Plugin 'tpope/vim-projectionist'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-abolish'
 
 " Git
 Plugin 'tpope/vim-fugitive.git'

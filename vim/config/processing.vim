@@ -1,1 +1,1 @@
-map <leader>mm :make<cr>
+noremap <leader>mm :make<cr>

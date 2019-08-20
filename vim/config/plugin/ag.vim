@@ -1,1 +1,1 @@
-nmap <silent> <leader>ff :Ag "<cword>" <CR>
+nnoremap <silent> <leader>ff :Ag "<cword>" <CR>

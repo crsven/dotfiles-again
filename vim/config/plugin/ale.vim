@@ -1,13 +1,13 @@
-" Navigate ale w/ ctrl-j/k
-nnoremap <C-k> :ALEPreviousWrap<cr>
-nnoremap <C-j> :ALENextWrap<cr>
+" Navigate ale w/ ctrl-j/k, including undoing internal mapping
+nnoremap <leader>ap :ALEPreviousWrap<cr>
+nnoremap <leader>an :ALENextWrap<cr>
 nnoremap <leader>fr :ALEFindReferences<cr>
 nnoremap <leader>gd :ALEGoToDefinition<cr>
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
-\   'python': ['isort', 'black'],
+\   'python': ['isort'],
 \}
 
 let g:ale_linters = {
@@ -15,11 +15,15 @@ let g:ale_linters = {
 \   'python': ['flake8', 'mypy', 'pyls'],
 \}
 
-" let g:ale_completion_enabled = 1
+set completeopt-=preview
+let g:ale_completion_enabled = 1
+" let g:ale_completion_delay = 150
+let g:ale_completion_max_suggestions = 10
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
 set omnifunc=ale#completion#OmniFunc
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-X><C-O>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 

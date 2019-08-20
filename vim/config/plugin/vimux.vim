@@ -27,21 +27,21 @@ if exists('$TMUX')
   "autocmd FileType cucumber nmap <Leader>tf :call VimuxRunCommand("bundle exec cucumber ".bufname("%")."\n")<CR>
 
   " Get current Cane status
-  map <Leader>tc :call VimuxRunCommand("bundle exec cane --style-measure 80 --style-glob ".bufname("%")." --abc-max 1 --abc-glob ".bufname("%")."\n")<CR>
+  nnoremap <Leader>tc :call VimuxRunCommand("bundle exec cane --style-measure 80 --style-glob ".bufname("%")." --abc-max 1 --abc-glob ".bufname("%")."\n")<CR>
 
   " Rebuild Mavn
-  map <Leader>bm :call VimuxRunCommand("mvn package -Dmaven.test.skip=true")<CR>
-  map <Leader>cm :call VimuxRunCommand("mvn install -Dmaven.test.skip=true")<CR>
+  nnoremap <Leader>bm :call VimuxRunCommand("mvn package -Dmaven.test.skip=true")<CR>
+  nnoremap <Leader>cm :call VimuxRunCommand("mvn install -Dmaven.test.skip=true")<CR>
 
   " Re-run last command
-  map <leader>tr :VimuxRunLastCommand<CR>
+  nnoremap <leader>tr :VimuxRunLastCommand<CR>
 
   " Close pane
-  map <leader>cp :VimuxCloseRunner<CR>
+  nnoremap <leader>cp :VimuxCloseRunner<CR>
 
   " Prompt command
-  map <leader>vp :VimuxPromptCommand<CR>
-  map <leader>vk :VimuxInterruptRunner<CR>
+  nnoremap <leader>vp :VimuxPromptCommand<CR>
+  nnoremap <leader>vk :VimuxInterruptRunner<CR>
 
   " Run last command with debugger once
   "autocmd FileType ruby map <leader>wtf Orequire 'ruby-debug'; debugger;<ESC>:w<CR>:VimuxRunLastCommand<CR>dd :sleep 8<CR> :w<CR>
@@ -77,10 +77,10 @@ if exists('$TMUX')
   " c for continue
   " e to return
   " p to prompt for command and send
-  map <leader>dn :call VimuxSendText('n')<CR> :call VimuxSendKeys("Enter")<CR>
-  map <leader>dc :call VimuxSendText('c')<CR> :call VimuxSendKeys("Enter")<CR>
-  map <leader>de :call VimuxSendKeys("Enter")<CR>
-  map <leader>dp :call VimuxSendPromptText()<CR>
+  nnoremap <leader>dn :call VimuxSendText('n')<CR> :call VimuxSendKeys("Enter")<CR>
+  nnoremap <leader>dc :call VimuxSendText('c')<CR> :call VimuxSendKeys("Enter")<CR>
+  nnoremap <leader>de :call VimuxSendKeys("Enter")<CR>
+  nnoremap <leader>dp :call VimuxSendPromptText()<CR>
 
   function! VimuxSendPromptText()
     let l:command = input(_VimuxOption("g:VimuxPromptString", "Text to send? "))

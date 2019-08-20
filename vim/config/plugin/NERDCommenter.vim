@@ -1,5 +1,4 @@
 " yank + comment + paste
-map ,cP ,cy'[P
-map ,cp ,cy']p
+noremap ,cP ,cy'[P
 
 let g:NERDSpaceDelims = 1

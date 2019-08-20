@@ -1,4 +1,7 @@
-autocmd FileType javascript map <Leader>co :call ConsoleLogIt()<CR>
+augroup JavascriptCommands
+  autocmd!
+  autocmd FileType javascript map <Leader>co :call ConsoleLogIt()<CR>
+augroup END
 
 function! Clean(input_string)
   let nospaces=substitute(a:input_string, '^\s*\(.\{-}\)\s*$', '\1', '')

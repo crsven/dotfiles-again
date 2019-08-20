@@ -1,2 +1,2 @@
-nmap <leader>cr :Require<CR>
-nmap <leader>ce :Eval<CR>
+nnoremap <leader>cr :Require<CR>
+nnoremap <leader>ce :Eval<CR>

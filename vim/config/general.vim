@@ -2,21 +2,21 @@
 let mapleader = ","
 
 " Save
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Quit
-nmap <leader>q :q<cr>
-nmap <leader>zz :wq!<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>zz :wq!<cr>
 
 " Remove search term highlights
-nmap <leader>nh :nohl<cr>
+nnoremap <leader>nh :nohl<cr>
 
 " Map Ctrl-J to <esc>
-imap <C-j> <Esc>
+inoremap <C-j> <Esc>
 
 " " Tab navigation
-map <C-H> gT
-map <C-L> gt
+noremap <C-H> gT
+noremap <C-L> gt
 
 nnoremap k gk
 nnoremap j gj
@@ -24,8 +24,8 @@ nnoremap gk k
 nnoremap gj j
 
 " Please don't show Help when I miss the 1, escape or tilde buttons
-nmap <F1> :echo<CR>
-imap <F1> <C-o>:echo<CR>
+nnoremap <F1> :echo<CR>
+inoremap <F1> <C-o>:echo<CR>
 
 " :set hidden
 set title

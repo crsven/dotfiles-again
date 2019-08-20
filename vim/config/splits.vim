@@ -1,9 +1,9 @@
 " "Split navigation
-map <C-X> <C-W>x
+nnoremap <C-X> <C-W>x
 
 " " Split resizing
-map + <C-W>+
-map - <C-W>-
+nnoremap + <C-W>+
+nnoremap - <C-W>-
 
 " " Split creation prefs
 set splitbelow

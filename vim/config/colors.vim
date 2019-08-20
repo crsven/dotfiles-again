@@ -1,5 +1,6 @@
 " " My colorz
 set t_Co=256
+set termguicolors
 syntax on
 set background=dark
 colorscheme gruvbox
@@ -41,9 +42,9 @@ function! s:SetColors(args)
     let s:mycolors = map(paths, 'fnamemodify(v:val, ":t:r")')
     echo 'List of colors set from all installed color schemes'
   elseif a:args == 'my'
-    let c1 = 'default elflord peachpuff desert256 breeze morning'
-    let c2 = 'darkblue gothic aqua earth black_angus relaxedgreen'
-    let c3 = 'darkblack freya motus impact less chocolateliquor'
+    let c1 = 'gruvbox Atelier_SulphurpoolLight colorsbox-material deus evening'
+    let c2 = ''
+    let c3 = ''
     let s:mycolors = split(c1.' '.c2.' '.c3)
     echo 'List of colors set from built-in names'
   elseif a:args == 'now'
@@ -102,9 +103,9 @@ function! s:NextColor(how, echo_color)
   endif
 endfunction
 
-nnoremap <F8> :call NextColor(1)<CR>
-nnoremap <S-F8> :call NextColor(-1)<CR>
-nnoremap <A-F8> :call NextColor(0)<CR>
+nnoremap <F6> :call NextColor(1)<CR>
+nnoremap <F7> :call NextColor(-1)<CR>
+nnoremap <F8> :call NextColor(0)<CR>
 
 " Set color scheme according to current time of day.
 function! s:HourColor()
@@ -125,3 +126,5 @@ function! s:HourColor()
   redraw
   echo g:colors_name
 endfunction
+
+silent call s:SetColors('my')

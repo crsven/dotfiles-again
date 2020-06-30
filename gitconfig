@@ -29,6 +29,7 @@
   lost-file = !git fsck --no-reflogs | grep commit | cut -d ' ' -f3 | xargs -J @ git log --no-walk --name-status @ --
   ;git lost-commits --pretty=tformat:'%H' | xargs -L1 git --no-pager show --name-status
   fethc = fetch
+  dif = diff
   dci = duet-commit
   drb = rebase -i --exec 'git duet-commit --amend --no-verify --no-edit'
   clean-branches = !git branch --merged | grep -v '^*' | xargs git branch -D
@@ -45,6 +46,7 @@
 [core]
   editor=/usr/local/bin/vim
   excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
   diff = always

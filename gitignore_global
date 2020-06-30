@@ -9,7 +9,6 @@ rerun.txt
 tags
 maketags
 ctags-makefile
-Makefile
 config/encrypted.yml
 mixture.json
 **/tmp-mixture/*
@@ -19,3 +18,4 @@ config/projections.json
 projections.json
 .projections.json
 .elixir_ls/**/*
+.mypy_cache

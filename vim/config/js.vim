@@ -1,6 +1,6 @@
 augroup JavascriptCommands
   autocmd!
-  autocmd FileType javascript map <Leader>co :call ConsoleLogIt()<CR>
+  autocmd FileType javascript,javascriptreact map <Leader>co :call ConsoleLogIt()<CR>
 augroup END
 
 function! Clean(input_string)
@@ -10,9 +10,15 @@ function! Clean(input_string)
 endfunction
 
 function! ConsoleLogIt()
-  let line=Clean(getline('.'))
-  let linenumber=line('.')
-  let filename=expand('%')
-  let output="console.log('".filename.":".linenumber." ::', ".line.")"
-  call setline('.', output)
+  let indentString = ""
+  let currentIndent = indent('.')
+  let i = 0
+  while i < currentIndent
+    let indentString = indentString." "
+    let i += 1
+  endwhile
+  execute "normal! yiwO\<ESC>p"
+  execute "normal! ciwconsole.log(\"\<ESC>pA: \", )\<ESC>PA;"
+  let currentLine = getline(line("."))
+  call setline(line("."), indentString.currentLine)
 endfunction

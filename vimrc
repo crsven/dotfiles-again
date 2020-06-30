@@ -1,73 +1,56 @@
-" Vundle stuff
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
-" Plugins
-Plugin 'vim-scripts/L9.git'
-Plugin 'mbbill/undotree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tsaleh/vim-align.git'
-Plugin 'michaeljsmith/vim-indent-object.git'
-Plugin 'tpope/vim-repeat.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-projectionist'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'rizzatti/dash.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-abolish'
+" Plugs
+Plug 'vim-scripts/L9'
+Plug 'mbbill/undotree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tsaleh/vim-align'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-projectionist'
+Plug 'flazz/vim-colorschemes'
+Plug 'rizzatti/dash.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-abolish'
 
 " Git
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'airblade/vim-gitgutter'
 
 "Rails dev
-Plugin 'tpope/vim-rails.git'
-Plugin 'tpope/vim-rake.git'
+" Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rake'
 
 "Searching
-Plugin 'rking/ag.vim'
-Plugin 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'junegunn/fzf.vim'
 
 "Nerdtree
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "Tmux integration
-Plugin 'benmills/vimux'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plug 'benmills/vimux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 "Testing plugins
-Plugin 'janko-m/vim-test'
+Plug 'janko-m/vim-test'
 
 " Language support
-Plugin 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax'
+" Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hail2u/vim-css3-syntax'
 
-"Clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'tidalcycles/vim-tidal'
 
-"Processing
-Plugin 'sophacles/vim-processing'
+call plug#end()
 
-Plugin 'w0rp/ale'
-Plugin 'vimwiki/vimwiki'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'leafgarland/typescript-vim'
-" Plugin 'Shougo/deoplete.nvim'
-" Plugin 'roxma/nvim-yarp'
-" Plugin 'roxma/vim-hug-neovim-rpc'
-" Plugin 'deoplete-plugins/deoplete-jedi'
-" Plugin 'prabirshrestha/asyncomplete.vim'
-" Plugin 'prabirshrestha/asyncomplete-buffer.vim'
-" Plugin 'runoshun/tscompletejob'
-" Plugin 'prabirshrestha/asyncomplete-tscompletejob.vim'
-
-call vundle#end()
 filetype plugin indent on
 syntax enable
 

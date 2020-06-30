@@ -83,7 +83,7 @@ alias resu='sudo $(history | tail -n1 | cut -c 8-)'
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-alias ports="lsof -i -P | grep -i 'listen'"
+alias ports="lsof -i -P | grep -i 'LISTEN'"
 
 #supermove
 autoload -U zmv
@@ -138,7 +138,9 @@ alias dcr="docker-compose run"
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey '^R' history-incremental-search-backward # override FZF Ctrl-R searching
-export FZF_DEFAULT_COMMAND="ag -g ''"
+export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 GIT_INITIALS="$(git config duet.env.git-author-initials) $(git config duet.env.git-commiter-initials)"
+export TERM=xterm-256color
+alias ag="rg"

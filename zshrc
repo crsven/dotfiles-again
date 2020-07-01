@@ -1,6 +1,6 @@
 unset GREP_OPTIONS
 
-export ZSH_THEME='bira-virtualenv'
+export ZSH_THEME='bira'
 
 source "${HOME}/.zgen/zgen.zsh"
 # if the init scipt doesn't exist

@@ -12,6 +12,7 @@ fancy_echo() {
 export -f fancy_echo
 
 source scripts/brew.sh
+source scripts/apps.sh
 source scripts/base-16.sh
 
 fancy_echo "Linking dotfiles into ~..."

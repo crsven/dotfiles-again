@@ -144,3 +144,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 GIT_INITIALS="$(git config duet.env.git-author-initials) $(git config duet.env.git-commiter-initials)"
 export TERM=xterm-256color
 alias ag="rg"
+
+eval "$(direnv hook zsh)"
+export PATH="/usr/local/opt/libpq/bin:$PATH"

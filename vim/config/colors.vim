@@ -3,7 +3,7 @@ set t_Co=256
 set termguicolors
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme base16-gruvbox-dark-pale
 
 highlight cppStructure guifg=black
 

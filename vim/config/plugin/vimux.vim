@@ -29,6 +29,10 @@ if exists('$TMUX')
   " Get current Cane status
   nnoremap <Leader>tc :call VimuxRunCommand("bundle exec cane --style-measure 80 --style-glob ".bufname("%")." --abc-max 1 --abc-glob ".bufname("%")."\n")<CR>
 
+  " ESLint it
+  nnoremap <Leader>lf :call VimuxRunCommand("./node_modules/.bin/eslint ".bufname("%")."\n")<CR>
+  nnoremap <Leader>la :call VimuxRunCommand("./node_modules/.bin/eslint .\n")<CR>
+
   " Rebuild Mavn
   nnoremap <Leader>bm :call VimuxRunCommand("mvn package -Dmaven.test.skip=true")<CR>
   nnoremap <Leader>cm :call VimuxRunCommand("mvn install -Dmaven.test.skip=true")<CR>

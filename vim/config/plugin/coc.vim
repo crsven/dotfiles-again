@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-python", "coc-html", "coc-css"]
+let g:coc_global_extensions = ["coc-eslint", "coc-json", "coc-lists", "coc-tsserver", "coc-python", "coc-html", "coc-css"]
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -14,7 +14,7 @@ set cmdheight=2
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c 
+set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
@@ -66,8 +66,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>fo  <Plug>(coc-format-selected)
-nmap <leader>fo <Plug>(coc-format-selected)
+xmap <leader>fs  <Plug>(coc-format-selected)
+nmap <leader>fs <Plug>(coc-format-selected)
+xmap <leader>fa  <Plug>(coc-format)
+nmap <leader>fa <Plug>(coc-format)
 
 augroup mygroup
   autocmd!
@@ -127,7 +129,5 @@ nnoremap <silent> <leader>ff :execute "CocList grep ".expand("<cword>")<CR>
 autocmd FileType python let b:coc_root_patterns = ['requirements.txt', '.git']
 
 nnoremap <silent> <space>rn :call CocAction("runCommand", "document.renameCurrentWord")<CR>
-
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 nmap <leader>do <Plug>(coc-codeaction)

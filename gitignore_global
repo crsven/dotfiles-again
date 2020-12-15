@@ -19,3 +19,5 @@ projections.json
 .projections.json
 .elixir_ls/**/*
 .mypy_cache
+.vim
+.lvimrc

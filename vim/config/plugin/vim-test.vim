@@ -4,4 +4,6 @@ nnoremap <Leader>ta :TestSuite<CR>
 
 let test#strategy = "vimux"
 let g:test#runner_commands = ['Jest', 'Nose']
-nnoremap <Leader>td :call TestDirectory(target_env)<CR>
+
+let test#javascript#cypress#file_pattern = 'cypress/'
+let test#javascript#reactscripts#options = '--watchAll=false'

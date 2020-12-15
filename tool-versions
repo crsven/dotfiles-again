@@ -1,5 +1,6 @@
-ruby 2.5.1
-nodejs 10.11.0
+ruby 2.7.1
+nodejs 12.13.0
 erlang 20.1
 elixir 1.7.3
-python 3.7.3
+python 2.7.18
+haskell 8.10.1

@@ -1,9 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-" Let Vundle manage Vundle
-Plug 'gmarik/Vundle.vim'
-
-" Plugs
+" " Plugs
 Plug 'vim-scripts/L9'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
@@ -12,42 +9,42 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-projectionist'
-Plug 'flazz/vim-colorschemes'
-Plug 'rizzatti/dash.vim'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-abolish'
 
-" Git
+" " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
-"Rails dev
-" Plug 'tpope/vim-rails'
-" Plug 'tpope/vim-rake'
+" "Rails dev
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
 
-"Searching
-Plug 'rking/ag.vim'
+" "Searching
 Plug 'junegunn/fzf.vim'
 
-"Nerdtree
+" "Nerdtree
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
-"Tmux integration
+" "Tmux integration
 Plug 'benmills/vimux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
-"Testing plugins
+" "Testing plugins
 Plug 'janko-m/vim-test'
 
-" Language support
-Plug 'vim-python/python-syntax'
-" Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'hail2u/vim-css3-syntax'
+" " Language support
+" Plug 'vim-python/python-syntax'
+" Plug 'hail2u/vim-css3-syntax'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
-Plug 'tidalcycles/vim-tidal'
+" Plug 'tidalcycles/vim-tidal'
+
+Plug 'embear/vim-localvimrc'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'n0v1c3/vira', { 'do': './install.sh', 'branch': 'dev' }
 
 call plug#end()
 

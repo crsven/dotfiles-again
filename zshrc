@@ -147,3 +147,5 @@ alias ag="rg"
 
 eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+alias fix_cameras="sudo killall VDCAssistant"

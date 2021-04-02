@@ -6,9 +6,10 @@
     "python.linting.mypyEnabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "list.source.grep.command": "rg"
+    "list.source.grep.command": "rg",
     "suggest.maxCompleteItemCount": 15,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
-    "solargraph.trace.server": "verbose"
+    "solargraph.trace.server": "verbose",
+    "solargraph.useBundler": false
 }

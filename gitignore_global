@@ -21,3 +21,4 @@ projections.json
 .mypy_cache
 .vim
 .lvimrc
+.solargraph.yml

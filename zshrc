@@ -149,3 +149,11 @@ eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 alias fix_cameras="sudo killall VDCAssistant"
+export N_PREFIX=$HOME/local/n
+export PATH=~/local/n/bin:$PATH
+export TMPDIR=/Users/csvenningsen/tmp
+
+bindkey -e
+bindkey \^U backward-kill-line
+
+source ~/.dotfiles/scripts/zsh-git.sh

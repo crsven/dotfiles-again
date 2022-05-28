@@ -22,6 +22,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 
 " "Searching
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " "Nerdtree
@@ -44,8 +45,9 @@ Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'embear/vim-localvimrc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'n0v1c3/vira', { 'do': './install.sh', 'branch': 'dev' }
+" Plug 'n0v1c3/vira', { 'do': './install.sh', 'branch': 'dev' }
 
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 filetype plugin indent on
@@ -54,3 +56,8 @@ syntax enable
 " delegate configuration to files in config/
 runtime! config/*.vim
 runtime! config/plugin/*.vim
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif

@@ -1,4 +1,4 @@
-set rtp+=/usr/local/opt/fzf
+set rtp+=/Users/csvenningsen/.homebrew/bin/fzf
 nnoremap <C-p> :Files<CR>
 
 " Sid's setup for floating window

@@ -19,7 +19,8 @@
   pt = push all --tags
   dc = diff --cached
   rollback = reset HEAD~
-  amend = commit -a --amend
+  amend = commit -a --amend --no-edit
+  amendd = commit -a --amend --no-edit
   ;wip = !git add -A && git commit -m '[ci skip] wip' -n
   serve = !git daemon --reuseaddr --base-path=. --export-all --verbose
   update-develop = !git co develop\t && git pull && git co -
@@ -44,7 +45,7 @@
   prompt = false
 
 [core]
-  editor=/usr/local/bin/vim
+  editor=$HOME/local/bin/vim
   excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 

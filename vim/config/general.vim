@@ -45,3 +45,5 @@ highlight ColorColumn guibg=#1c1c1c ctermbg=234 ctermfg=160
 autocmd FileType markdown setlocal wrap
 
 set autoread
+
+nnoremap <leader>rr :redraw!<cr>

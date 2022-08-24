@@ -34,18 +34,20 @@ brew "z"
 brew "zsh"
 
 # Cask
-tap "caskroom/cask"
+tap "homebrew/cask"
 cask_args appdir: '/Applications'
 cask "alfred"
 cask "charles"
 cask "dash"
 cask "dropbox"
 cask "fantastical"
-cask "google-chrome"
+# cask "google-chrome"
 cask "kitty"
+cask "mutify"
 cask "slack"
 cask "spotify"
+cask "tableplus"
 
 # Apple Dev
-mas "Xcode", id: 497799835
-system "sudo xcodebuild -license accept"
+# mas "Xcode", id: 497799835
+# system "sudo xcodebuild -license accept"

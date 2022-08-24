@@ -1,2 +1,3 @@
-fancy_echo "Installing scripts to /usr/local/bin..."
-ln -s $(pwd)/bin/* ~/.homebrew/bin
+fancy_echo "Installing scripts to $HOME/bin..."
+mkdir $HOME/bin
+ln -s $(pwd)/bin/* $HOME/bin

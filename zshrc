@@ -41,7 +41,7 @@ zmodload -i zsh/complist
 export DISABLE_UPDATE_PROMPT=true
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin:$PATH
 export TEMP=~/temp
 
 # z stuff
@@ -54,6 +54,7 @@ alias l='ls -l'
 alias ll='ls -lah'
 alias ber='bundle exec rake'
 alias bec='bundle exec cucumber'
+alias sync_dotfiles='RCRC=rcrc rcup -v'
 
 # fixing auto correct
 alias git='nocorrect git'

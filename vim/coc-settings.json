@@ -9,6 +9,7 @@
     "list.source.grep.command": "rg",
     "list.source.grep.args": ["-i"],
     "suggest.maxCompleteItemCount": 15,
+    "suggest.noselect": true,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
     "solargraph.trace.server": "verbose",

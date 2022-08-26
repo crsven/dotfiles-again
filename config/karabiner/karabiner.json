@@ -20,7 +20,7 @@
                             {
                                 "description": "Change caps_lock to command+control+option+shift.",
                                 "from": {
-                                    "key_code": "right_control",
+                                    "key_code": "right_option",
                                     "modifiers": {
                                         "optional": [
                                             "any"

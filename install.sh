@@ -32,5 +32,5 @@ source system/osx.sh
 
 source scripts/bin.sh
 source scripts/fonts.sh
-source system/git.sh
+source scripts/git.sh
 fancy_echo "Bootstrapped!"

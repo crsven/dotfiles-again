@@ -41,7 +41,7 @@ Plug 'janko-m/vim-test'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
-" Plug 'tidalcycles/vim-tidal'
+Plug 'tidalcycles/vim-tidal'
 
 Plug 'embear/vim-localvimrc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

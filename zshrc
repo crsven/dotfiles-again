@@ -27,7 +27,6 @@ if ! zgen saved; then
         zsh-users/zsh-completions src
         zsh-users/zsh-syntax-highlighting
         felixr/docker-zsh-completion
-        yonchu/grunt-zsh-completion
 EOPLUGINS
 
     # save all to init script
@@ -41,7 +40,7 @@ zmodload -i zsh/complist
 export DISABLE_UPDATE_PROMPT=true
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:./bin:$PATH
 export TEMP=~/temp
 
 # z stuff
@@ -115,6 +114,7 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 else
   eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
 fi
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -147,7 +147,7 @@ export TERM=xterm-256color
 alias ag="rg"
 
 eval "$(direnv hook zsh)"
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 alias fix_cameras="sudo killall VDCAssistant"
 export N_PREFIX=$HOME/local/n
@@ -158,3 +158,9 @@ bindkey -e
 bindkey \^U backward-kill-line
 
 source ~/.dotfiles/scripts/zsh-git.sh
+. $HOME/.ghcup/env
+export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
+
+# Use leading space to keep command out of history
+setopt HIST_IGNORE_SPACE

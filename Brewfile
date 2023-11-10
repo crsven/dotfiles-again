@@ -13,14 +13,14 @@ brew "git"
 tap "git-duet/tap"
 brew "git-duet"
 brew 'gnupg'
-brew "grep", args: ["with-default-names"]
+# brew "grep", args: ["with-default-names"]
 brew "imagemagick"
 brew "libpq"
-brew "mas"
+# brew "mas"
 brew "openssl"
 brew "pgcli"
 brew "pinentry-mac"
-brew 'qt5'
+brew "qt5"
 tap "thoughtbot/formulae"
 brew "rcm"
 brew "ripgrep"

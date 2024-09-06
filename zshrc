@@ -21,6 +21,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/virtualenv
     zgen oh-my-zsh themes/bira
+    zgen oh-my-zsh plugins/z
 
     # bulk load
     zgen loadall <<EOPLUGINS
@@ -135,6 +136,7 @@ alias dcr="docker-compose run"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
 
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -164,3 +166,5 @@ export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 
 # Use leading space to keep command out of history
 setopt HIST_IGNORE_SPACE
+
+alias whatsmyip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed 's/^\"\(.*\)\"$/\1/' | sed 's/\n//'"

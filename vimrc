@@ -45,6 +45,7 @@ Plug 'tidalcycles/vim-tidal'
 
 Plug 'embear/vim-localvimrc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 " Plug 'n0v1c3/vira', { 'do': './install.sh', 'branch': 'dev' }
 
 Plug 'vimwiki/vimwiki'

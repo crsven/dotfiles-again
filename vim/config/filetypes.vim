@@ -26,5 +26,5 @@ au BufNewFile,BufRead *.swift set ft=swift
 au BufNewFile,BufRead *.processing set ft=processing
 
 " add typescript syntax highlighting
-au BufNewFile,BufRead *.ts set ft=typescript
-au BufNewFile,BufRead *.tsx set ft=typescriptreact
+" au BufNewFile,BufRead *.ts set ft=typescript
+" au BufNewFile,BufRead *.tsx set ft=typescriptreact

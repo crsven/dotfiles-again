@@ -46,7 +46,7 @@
   prompt = false
 
 [core]
-  editor=$HOME/local/bin/vim
+  editor=/usr/bin/vim
   excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
@@ -56,6 +56,7 @@
   ui = auto
 [init]
   templatedir = ~/.git_template
+	defaultBranch = main
 [rerere]
   enabled = true
 [diff]
@@ -63,7 +64,10 @@
 [commit]
   gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+	allowedSignersFile = /Users/csvenningsen/.ssh/allowed_signers
 [push]
   default = current
 [pull]

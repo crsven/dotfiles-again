@@ -5,7 +5,6 @@ set -e
 fancy_echo() {
   local fmt="$1"; shift
 
-  # shellcheck disable=SC2059
   printf "\n$fmt\n" "$@"
 }
 
@@ -21,14 +20,8 @@ RCRC=rcrc rcup -v
 source scripts/vim.sh
 source scripts/zsh.sh
 
-CURRENT_SHELL=$(echo $0)
-if [[ $CURRENT_SHELL != *zsh ]]; then
-  fancy_echo "Please re-run in a new tab/window with ZSH"
-  exit 1
-fi
-
 source scripts/asdf.sh
-source system/osx.sh
+# source system/osx.sh - needs to updated
 
 source scripts/bin.sh
 source scripts/fonts.sh
